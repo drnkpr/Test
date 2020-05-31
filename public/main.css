@@ -1,0 +1,147 @@
+#cover {
+    background-image: url('poza1.jpeg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+}
+
+#cover h1{
+    color: aliceblue;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.btn-st, .btn-dr{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20%;
+    height: 50vh;
+    width: 15%;
+}
+
+.btn-st{
+    left: 40px;
+}
+
+.btn-dr{
+    right: 40px;
+}
+
+.mdl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.active-modal{
+    visibility: visible;
+    opacity: 1;
+}
+
+#inventar, #adauga, #vinde, #adaugaSortiment, #scoateSortiment{
+    position: relative;
+    background-color: whitesmoke;
+    width: 40%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#inventar h1,p{
+    text-align: center;
+}
+
+#inventar h1{
+    padding-top: 10px;
+}
+
+.btn-st button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-dr button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-dr button:nth-of-type(1){
+    animation: transitionDr 0.5s;
+}
+
+.btn-dr button:nth-of-type(2){
+    animation: transitionDr 1s;
+}
+
+.btn-dr button:nth-of-type(3){
+    animation: transitionDr 1.5s;
+}
+
+.btn-st button:nth-of-type(1){
+    animation: transitionSt 0.5s;
+}
+.btn-st button:nth-of-type(2){
+    animation: transitionSt 1s;
+}
+.btn-st button:nth-of-type(3){
+    animation: transitionSt 1.5s;
+}
+
+@keyframes transitionSt {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0) ;
+    }
+}
+
+@keyframes transitionDr {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateX(+20px);
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0) ;
+    }
+}
+

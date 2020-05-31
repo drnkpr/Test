@@ -1,0 +1,75 @@
+<%- include("partials/header") %>
+
+    <div class="container-fluid" id="cover">
+        <h1>De aici numeri cafeaua</h1>
+    </div>
+    
+    <div class="btn-st">
+        <button class="btn btn-primary" id="btn-inventar">Vezi inventar</button>
+        <button class="btn btn-primary" id="btn-adauga">Adauga cafea</button>
+        <button class="btn btn-primary" id="btn-vinde">Vinde cafea</button>
+    </div>
+
+    <div class="btn-dr">
+        <button class="btn btn-primary" id="btn-sortimente">Adauga sortiment</button>
+        <button class="btn btn-primary" id="btn-scoateSortiment">Scoate sortiment</button>
+        <button class="btn btn-primary">Vezi</button>
+    </div>
+
+    <div class="mdl" id="mdl-inventar">
+        <div id="inventar">
+            <h1>Ai in stoc:</h1> 
+            <p> <%= cafea  %> kg de Lapte</p>
+
+            <button class="btn btn-primary">Done</button>
+        </div>
+    </div>
+    
+    <div class="mdl" id="mdl-adauga">
+        <div id="adauga">
+            <h3>Adauga (kg cafea): </h3>
+            <form action="/adauga" method="POST" id="adaugaCafea"> 
+                <input type="number" name="cafeaAdaugata">
+            </form>
+                <button class="btn btn-primary" name="Submit" form="adaugaCafea">Adauga</button>
+                <button class="btn btn-success">Done</button>
+            
+        </div>
+    </div>
+
+
+
+    <div class="mdl" id="mdl-vinde">
+        <div id="vinde">
+            <h3>Am vandut (kg cafea): </h3>
+            <form action="/vinde" method="POST" id="vindeCafea"> 
+                <input type="number" name="cafeaVanduta">
+            </form>
+                <button class="btn btn-primary" name="Submit" form="vindeCafea">Vinde</button>
+                <button class="btn btn-success">Done</button>
+            
+        </div>
+    </div>
+
+
+
+
+    //tests +++++++++++++++++++++++++++++++++++++++ LIP??
+    <div class="mdl" id="mdl-sortiment">
+        <div id="adaugaSortiment">
+        </div>
+    </div>
+
+
+
+    <div class="mdl" id="mdl-scoateSortiment">
+        <div id="scoateSortiment">
+            <select id="select"></select>
+        </div>
+    </div>
+
+    //tests +++++++++++++++++++++++++++++++++++++++ LIP??
+
+
+
+<%- include("partials/footer") %>
